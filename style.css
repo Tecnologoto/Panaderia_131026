@@ -1,7 +1,5 @@
-/* Importación tipográfica optimizada para la identidad visual gourmet */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
 
-/* Declaración de variables globales de diseño (paleta cromática y consistencia visual) */
 :root {
     --cafe-oscuro: #2b170c;
     --cafe: #4a2a16;
@@ -14,7 +12,6 @@
     --texto: #3a2414;
 }
 
-/* Selector universal optimizado para el reseteo de márgenes y modelo de caja */
 * {
     margin: 0;
     padding: 0;
@@ -39,15 +36,13 @@ img {
 
 .portada {
     position: relative;
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     color: var(--crema);
-    /* Composición avanzada de múltiples fondos: gradiente radial de iluminación, lineal y patrón repetitivo */
-    background:
-        radial-gradient(ellipse at 75% 60%, rgba(224, 138, 60, 0.35), transparent 55%),
-        linear-gradient(180deg, rgba(43, 23, 12, 0.85), rgba(74, 42, 22, 0.75)),
-        repeating-linear-gradient(90deg, #4a2a16 0 40px, #3f2312 40px 80px);
+    background: 
+        linear-gradient(rgba(43, 23, 12, 0.75), rgba(43, 23, 12, 0.65)),
+        url('img/panada.jpeg') no-repeat center center/cover;
     border-bottom: 4px solid var(--naranja);
 }
 
@@ -55,11 +50,11 @@ img {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    justify-content: center;
+    gap: 3rem;
     padding: 1.2rem 3rem;
     min-height: 90px;
-    background: rgba(43, 23, 12, 0.7);
-    /* Efecto de desenfoque de fondo avanzado para la barra de navegación */
+    background: rgba(43, 23, 12, 0.85);
     backdrop-filter: blur(4px);
     border-bottom: 1px dashed rgba(217, 164, 65, 0.4);
 }
@@ -79,20 +74,15 @@ img {
     transform: translateY(-2px);
 }
 
-.NavBar a:last-of-type {
-    margin-left: auto;
-}
-
 .logo {
     position: absolute;
-    left: 50%;
-    top: 0;
-    /* Transformación geométrica avanzada para centrado absoluto preciso */
-    transform: translateX(-50%);
-    height: 130px;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70px;
     width: auto;
-    border-radius: 0 0 14px 14px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     z-index: 5;
 }
 
@@ -102,16 +92,15 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 3rem 3rem 5rem;
-    max-width: 650px;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    padding: 4rem 3rem;
+    max-width: 750px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .imagenMenu h1 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 700;
-    /* Uso de función matemática clamp() para tipografía fluida y adaptable sin media queries */
     font-size: clamp(2.8rem, 7vw, 5rem);
     line-height: 1.1;
     color: #fff3dc;
@@ -123,6 +112,10 @@ img {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--crema-oscuro);
+}
+
+.imagenMenu img {
+    display: none;
 }
 
 main {
@@ -147,11 +140,9 @@ main > p:last-of-type {
     border-top: 1px dashed var(--cafe-medio);
 }
 
-/* Listas estructuradas como tarjetas mediante Grid adaptativo */
 main ul {
     list-style: none;
     display: grid;
-    /* Uso de minmax y auto-fit para diseño responsivo automático en cuadrículas */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.2rem;
 }
@@ -176,7 +167,6 @@ main ul br {
     display: none;
 }
 
-/* Contenedor principal de productos con distribución optimizada */
 main ul > div {
     grid-column: 1 / -1;
     margin-top: 2rem;
@@ -188,13 +178,11 @@ main ul > div {
 
 dl {
     display: grid;
-    /* Definición explícita de columnas múltiples para el catálogo de productos */
     grid-template-columns: repeat(5, 1fr);
     column-gap: 1.2rem;
     row-gap: 0.5rem;
 }
 
-/* Selector relacional avanzado con pseudo-clase :is() para mapeo de elementos en rejilla */
 dl > :is(dt, dd, img):nth-of-type(1) { --n: 1; --c: 1; --g: 0; }
 dl > :is(dt, dd, img):nth-of-type(2) { --n: 2; --c: 2; --g: 0; }
 dl > :is(dt, dd, img):nth-of-type(3) { --n: 3; --c: 3; --g: 0; }
@@ -202,7 +190,6 @@ dl > :is(dt, dd, img):nth-of-type(4) { --n: 4; --c: 4; --g: 0; }
 dl > :is(dt, dd, img):nth-of-type(5) { --n: 5; --c: 5; --g: 0; }
 
 dl > img {
-    /* Posicionamiento dinámico basado en variables CSS personalizadas */
     grid-column: var(--c);
     grid-row: calc(var(--g) * 3 + 1);
     width: 100%;
@@ -241,7 +228,6 @@ dd {
 
 .contacto {
     display: grid;
-    /* Rejilla de dos columnas para sección de ubicación y formulario */
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     padding: 4rem 3rem;
@@ -362,7 +348,6 @@ footer {
     color: var(--dorado);
 }
 
-/* Diseño responsivo para tabletas y pantallas medianas */
 @media (max-width: 1000px) {
     dl { grid-template-columns: repeat(3, 1fr); }
 
@@ -374,17 +359,21 @@ footer {
     }
 }
 
-/* Diseño responsivo para dispositivos móviles (apertura a una sola columna y reestructuración de espacios) */
 @media (max-width: 650px) {
     .NavBar {
         padding: 1rem 1.2rem;
         gap: 1.2rem;
         min-height: 80px;
+        flex-wrap: wrap;
     }
 
     .NavBar a { font-size: 0.95rem; }
 
-    .logo { height: 90px; }
+    .logo { 
+        position: static;
+        transform: none;
+        height: 55px; 
+    }
 
     .imagenMenu {
         padding: 2rem 1.2rem 3rem;
