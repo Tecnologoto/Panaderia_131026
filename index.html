@@ -1,55 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
-        <title>El trigal</title>
+        <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-
-        <header>
-            <div class="NavBar"> 
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <img src="img/Logo_El_Trigal.jpeg" alt="Logo_El_Trigal" class="logo">
-            </div>
-            <h1><b>El trigal</b></h1>
-            <p><i>Pan dulce, vida dulce</i></p>
-        </header>
-        <main> 
-            <p>En El Trigal, honramos la tierra y elevamos el arte de la panadería.</p>
-            <ul>
-                <li>Calidad:Selección estricta de harinas orgánicas, masa madre viva y los ingredientes más puros.</li>
-                <li>Tradición:Recetas transmitidas de generación en generación, preservando la esencia de la panadería artesanal.</li>
-                <li>Innovación:Implementamos técnicas modernas sin perder la esencia tradicional.</li>
-                <li>Compromiso: Nos dedicamos a ofrecer productos de la más alta calidad, elaborados con pasión y dedicación.</li>
-                <br><br>
-                <div>
-                    <dl>
-                        <dt>Pan de Campo Gourmet</dt>
-                            <dd>Corteza rústica, miga húmeda y sabor intenso. Ideal para acompañar comidas caseras o gourmet.</dd>
-                            <img src="img/Pan_de_Campo_Gourmet.jpeg" alt="Pan de Campo Gourmet" class="product-image">
-                        <dt>Baguette de Masa Madre</dt>
-                            <dd>Ligera, crujiente y con aroma profundo. Perfecta para quesos y vinos.</dd>
-                            <img src="img/Baguette_de_Masa_Madre.jpeg" alt="Baguette de Masa Madre" class="product-image">
-                        <dt>Croissant Artesanal</dt>
-                            <dd>Hojaldrado, con mantequilla pura y textura delicada. Un clásico francés con toque mexicano.</dd>
-                            <img src="img/Croissant_Artesanal.jpeg" alt="Croissant Artesanal" class="product-image">
-                        <dt>Pan Integral con Semillas</dt>
-                            <dd>Mezcla de linaza, girasol y ajonjolí. Nutritivo, suave y lleno de energía.</dd>
-                            <img src="img/Pan_Integral_con_Semillas.jpeg" alt="Pan Integral con Semillas" class="product-image">
-                        <dt>Focaccia Mediterránea</dt>    
-                            <dd>Con aceite de oliva extra virgen, romero y tomates secos. Ideal para compartir o acompañar ensaladas.</dd>  
-                            <img src="img/Focaccia_Mediterranea.jpeg" alt="Focaccia Mediterránea" class="product-image">
-                    </dl>
+        <header class="portada" id="portada">
+            <!-- PORTADA -->
+            <div class="menuCentral">
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#portada">portada</a></li>
+                            <li><a href="#contenido">contenido</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </ul>
-            <p>Más que pan, creamos momentos memorables alrededor de la mesa.</p>
-        </main>
+
+                <div class="imagenMenu">
+                    <img src="" alt="imagen de la portada">
+                    <h1>slogan</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENIDO -->
+        <div class="contenido" id="contenido">
+            <div class="divMain">
+                <div class="nosotros">
+                    <h2>Acerca de nosotros</h2>
+                    <div>
+
+                    </div>
+                </div>
+
+                <div class="productos_servicios">
+                    <div class="productos">
+                        <h3>Productos</h3>
+                    </div>
+
+                    <div class="servicios">
+                        <h3>Servicios</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="contacto" id="contacto">
+                <h2>contacto</h2>
+            <div class="ubicacion">
+                <h2>visitanos en nuestra sucursar</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29992.704106140212!2d-99.33946879999999!3d20.00482045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d22d134f5ed9d9%3A0xaf1e77aba8c3a0a2!2sUniversidad%20Tecnol%C3%B3gica%20de%20Tula-Tepeji!5e0!3m2!1ses-419!2smx!4v1791928350221!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+            <div class="formulario">
+                <h2>Formulario de contacto</h2>
+                <form action="" method="post">
+
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar mensaje</button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+
+        <!-- PIE DE PAGINA -->
         <footer>
-            <a href="">Contacto</a>
+            <div>
+                <p>Teléfono: 000 000 0000</p>
+                <p>Correo: ejemplo@correo.com</p>
+            </div>
         </footer>
     
     </body>
